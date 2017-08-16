@@ -12,7 +12,7 @@ public class MessageSupportFactory {
 	private MessageSupportFactory() {
 		props = new Properties();
 		try {
-			props.load(new FileInputStream("prospring4/ch2/msf.properties"));
+			props.load(new FileInputStream("src/main/java/prospring4/ch2/msf.properties"));
 			String rendererClass = props.getProperty("renderer.class");
 			String providerClass = props.getProperty("provider.class");
 			renderer = (MessageRenderer) Class.forName(rendererClass).newInstance();
